@@ -1,0 +1,13 @@
+<!--[routerLink]="[course.id]"-->
+<li 
+[routerLink]="[course.id]"
+class="list-group-item p-1 m-1" 
+[ngClass]="{
+
+    'list-group-item-danger':!course.isAvailabel,
+
+    'list-group-item-success':course.isAvailabel
+}"
+
+
+>{{course?.title}}</li>

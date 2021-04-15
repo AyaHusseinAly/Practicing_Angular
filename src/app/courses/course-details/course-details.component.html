@@ -1,0 +1,11 @@
+<div *ngIf="course; else loadingTemplate">
+  <p>ID: #{{ course.id }}</p>
+
+  <p>Title: {{ course.title }}</p>
+
+  <p>Instructor: {{ course.instructor }}</p>
+
+  <p>Availabel: {{ course.isAvailabel }}</p>
+</div>
+
+<ng-template #loadingTemplate> Loading... </ng-template>

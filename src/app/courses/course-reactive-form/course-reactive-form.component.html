@@ -1,0 +1,30 @@
+<form [formGroup]="courseForm" (ngSubmit)="onSubmit(courseForm)">
+    <div class="col-6">
+        <div class="form-group">
+            <label >Title</label>
+            <input type="text" class="form-control" formControlName="title">
+            <div class="alert alert-danger" *ngIf="courseForm.get('title')?.dirty && 
+            courseForm.get('title')?.hasError('required')"> Title is Required
+            </div>
+        </div>
+
+    </div>
+    <div class="col-6">
+        <div class="form-group">
+            <label >Instructor</label>
+            <input type="text" class="form-control" formControlName="instructor" >
+            <div class="alert alert-danger" *ngIf="courseForm.get('instructor')?.dirty && 
+            courseForm.get('instructor')?.hasError('required')"> Instructor is Required
+            </div>
+        </div>
+    </div>  
+    <div class="row p-5 ">
+    <div class="col-4"> 
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" formControlName="isAvailabel">
+            <label class="form-check-label" >IsAvailable</label>
+        </div>
+    </div> 
+    <button type="submit" class="btn btn-primary ">Submit</button>
+</div>
+</form>
